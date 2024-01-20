@@ -1,19 +1,7 @@
-// const  {User} =require( "./../models/User.js");
 import User from './../models/User.js'
-// const nodemailer = require("nodemailer");
 import nodemailer from 'nodemailer'
-
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD
-    }
-});
 const postApiSignup = async (req, res) => {
     const { name, mobile, email, address, Reference } = req.body;
-
-
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -23,9 +11,11 @@ const postApiSignup = async (req, res) => {
     });
     const mailOptions = {
         from: process.env.EMAIL,
-        to: "cloudmaniaindia@gmail.com",
-        subject: ``,
-        text: "successfully register"
+        to: "gayatri@golokait.com",
+        subject: `${name} successfully the user Register ✅`,
+        text: ` Name : ${name} 
+        Mobile :${mobile} 
+        Address: ${address} is  Register is successfully which is come from reference  ${Reference}.`
     };
     const registrationCount = await User.countDocuments({ mobile });
             console.log(registrationCount)
@@ -33,7 +23,7 @@ const postApiSignup = async (req, res) => {
     if (registrationCount > 4) {
         return res.json({
             success: false,
-            message: 'you already'
+            message: 'you already cross limit'
         });
     }
 
@@ -54,19 +44,11 @@ const postApiSignup = async (req, res) => {
             return res.json({
                 success: true,
                 data: saved,
-                message: 'Registration successful'
+                message: 'Registration successfully !'
             });
         }
 
-
-
-
-
     });
-
-
-
-
 
 
 };

@@ -12,6 +12,10 @@ const app=express()
 app.use(express.json())
 const PORT = process.env.PORT || 5000
 
+import path from 'path';
+
+const __dirname = path.resolve();
+
 
 const mongoDb = async () => {
     try {
@@ -32,28 +36,14 @@ app.post('/api/v1/registers',postApiSignup)
 
 
 
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: '',
-//     pass: ''
-//   }
-// });
 
-// var mailOptions = {
-//   from: 'youremail@gmail.com',
-//   to: 'myfriend@yahoo.com',
-//   subject: 'Sending Email using Node.js',
-//   text: 'That was easy!'
-// };
-
-// transporter.sendMail(mailOptions, function(error, info){
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log('Email sent: ' + info.response);
-//   }
-// });
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+  
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
+    });
+  }
 
 
 
