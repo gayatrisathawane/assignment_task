@@ -22,7 +22,7 @@ const Navbar = () => {
                 <Link className="nav-link active ms-4 nav-hover-1  fs-5 px-4 text-light" to="#">AboutUs</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active ms-4 nav-hover-1  fs-5 px-4 text-light" to="#">ContactUS</Link>
+                <Link className="nav-link active ms-4 nav-hover-1  fs-5 px-4 text-light" to="#">ContactUs</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active ms-4 nav-hover-1 fs-5 px-4 text-light" to="#">Services</Link>
