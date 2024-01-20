@@ -1,0 +1,124 @@
+.register-img{
+   
+        height:540px;
+        filter:drop-shadow(0 0 3px #1990ff)
+      
+}
+
+/* .register-img-container{
+    width: 50%;
+   
+  }
+  .sign-up-details{
+    width: 50%;
+    padding: 100px;
+  } */
+  
+  .register-img{
+    height:540px;
+    filter:drop-shadow(0 0 3px #1990ff)
+  }
+  
+  .register-main-container{
+    display: flex;
+    justify-content: space-around;
+    /* background-color: #e6f9ff; */
+  }
+  
+  .input-label{
+  
+      font-size: 22px;
+      color: rgb(27, 48, 158);
+      font-weight: 600;
+  
+      
+  }
+  
+  
+  
+  
+  .register-input-field{
+    height: 32px;
+    width:340px;
+    padding: 18px;
+    outline: none;
+    border: 1px solid rgb(81, 188, 230);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(225, 222, 222);
+  }
+  
+  .singup-btn{
+    display: block;
+    margin: 15px 10px;
+    background-color: #0083ff;
+    color: white;
+    padding: 7px 70px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+  }
+  .gender-input{
+  
+    width: 20px;
+    
+  }
+  
+  .sign-up-heading{
+   margin-bottom: 40px;
+   text-align: center;
+   font-size: 35px;
+  }
+  
+  /* input[type=radio] {
+    border: 0px;
+    width: 50%;
+   
+  } */
+  
+  .blue-color{
+    color: #0083ff;
+  }
+  
+  @media only screen and (max-width : 768px) {
+  
+    .sign-up-heading{
+      width:200px;
+    }
+    .register-img{
+      height:500px;
+      filter:drop-shadow(0 0 3px #1990ff)
+    }
+  
+    
+  
+    .register-main-container{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  
+    
+    .inputregister{
+      display: flex;
+    flex-direction: column;
+  
+    }
+  
+    .register-img{
+  
+      height:400px;
+    }
+  
+    
+  
+    
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
