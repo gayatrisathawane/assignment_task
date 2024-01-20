@@ -11,11 +11,11 @@ const postApiSignup = async (req, res) => {
     });
     const mailOptions = {
         from: process.env.EMAIL,
-        to: "gayatri@golokait.com",
+        to: "cloudmaniaindia@gmail.com",
         subject: `${name} successfully the user Register ✅`,
         text: ` Name : ${name} 
         Mobile :${mobile} 
-        Address: ${address} is  Register is successfully which is come from reference  ${Reference}.`
+        Address: ${address} is  Register is successfully which is come from reference  ${Reference}. 👍`
     };
     const registrationCount = await User.countDocuments({ mobile });
             console.log(registrationCount)
